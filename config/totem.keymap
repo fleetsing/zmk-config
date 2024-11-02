@@ -34,173 +34,173 @@
     combos {
         compatible = "zmk,combos";
 
-        plus {
+        combo_plus {
             bindings = <&kp PLUS>;
             key-positions = <6 16>;
             layers = <0 1>;
             require-prior-idle-ms = <100>;
         };
 
-        minus {
+        combo_minus {
             bindings = <&kp MINUS>;
             key-positions = <16 27>;
             layers = <0 1>;
             require-prior-idle-ms = <100>;
         };
 
-        times {
+        combo_asterisk {
             bindings = <&kp LS(SQT)>;
             key-positions = <7 17>;
             layers = <0 1>;
             require-prior-idle-ms = <100>;
         };
 
-        slash {
+        combo_slash {
             bindings = <&kp LS(SLASH)>;
             key-positions = <17 28>;
             layers = <0 1>;
             require-prior-idle-ms = <100>;
         };
 
-        ampersand {
+        combo_ampersand {
             bindings = <&kp LS(NUMBER_6)>;
             key-positions = <8 18>;
             layers = <0 1>;
             require-prior-idle-ms = <100>;
         };
 
-        pipe {
+        combo_pipe {
             bindings = <&kp LA(NUMBER_6)>;
             key-positions = <18 29>;
             layers = <0 1>;
             require-prior-idle-ms = <100>;
         };
 
-        left_parenthesis {
+        combo_left_parenthesis {
             bindings = <&kp LS(N8)>;
             key-positions = <16 17>;
             require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
 
-        right_parenthesis {
+        combo_right_parenthesis {
             bindings = <&kp LS(N9)>;
             key-positions = <17 18>;
             require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
 
-        left_bracket {
+        combo_left_bracket {
             bindings = <&kp RA(N8)>;
             key-positions = <6 7>;
             require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
 
-        right_bracket {
+        combo_right_bracket {
             bindings = <&kp RA(N9)>;
             key-positions = <7 8>;
             require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
 
-        left_brace {
+        combo_left_brace {
             bindings = <&kp RS(RA(N8))>;
             key-positions = <27 28>;
             require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
 
-        right_brace {
+        combo_right_brace {
             bindings = <&kp RS(RA(N9))>;
             key-positions = <28 29>;
             require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
 
-        equal {
+        combo_equal {
             bindings = <&kp LS(N0)>;
             key-positions = <19 18>;
             require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
 
-        caret {
+        combo_caret {
             bindings = <&kp LS(RIGHT_BRACKET)>;
             key-positions = <5 15>;
             require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
 
-        underscore {
+        combo_underscore {
             bindings = <&kp LS(MINUS)>;
             key-positions = <15 26>;
             require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
 
-        at_sign {
+        combo_at_sign {
             bindings = <&kp RA(NUMBER_2)>;
             key-positions = <1 11>;
             require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
 
-        percent {
+        combo_percent {
             bindings = <&kp LS(N5)>;
             key-positions = <11 22>;
             require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
 
-        hash {
+        combo_hash {
             bindings = <&kp LS(NUMBER_3)>;
             key-positions = <2 12>;
             require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
 
-        backslash {
+        combo_backslash {
             bindings = <&kp RS(RA(N7))>;
             key-positions = <12 23>;
             require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
 
-        dollar_sign {
+        combo_dollar_sign {
             bindings = <&kp RA(NUMBER_4)>;
             key-positions = <3 13>;
         };
 
-        euro_sign {
+        combo_euro_sign {
             bindings = <&kp RS(NUMBER_4)>;
             key-positions = <13 24>;
             require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
 
-        tab_back {
+        combo_tab_back {
             bindings = <&kp RS(TAB)>;
             key-positions = <11 12>;
             require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
 
-        tab {
+        combo_tab {
             bindings = <&kp TAB>;
             key-positions = <12 13>;
             require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
 
-        less_than {
+        combo_less_than {
             bindings = <&kp LESS_THAN>;
             key-positions = <22 23>;
             require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
 
-        greater_than {
+        combo_greater_than {
             bindings = <&kp RS(LESS_THAN)>;
             key-positions = <23 24>;
             require-prior-idle-ms = <100>;
