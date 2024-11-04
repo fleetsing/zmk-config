@@ -181,28 +181,28 @@
 
         combo_tab_back {
             bindings = <&kp RS(TAB)>;
-            key-positions = <11 12>;
+            key-positions = <23 22>;
             require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
 
         combo_tab {
             bindings = <&kp TAB>;
-            key-positions = <12 13>;
+            key-positions = <23 24>;
             require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
 
         combo_less_than {
             bindings = <&kp LESS_THAN>;
-            key-positions = <22 23>;
+            key-positions = <11 12>;
             require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
 
         combo_greater_than {
             bindings = <&kp RS(LESS_THAN)>;
-            key-positions = <23 24>;
+            key-positions = <12 13>;
             require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
@@ -222,6 +222,20 @@
         combo_tilde {
             bindings = <&kp TILDE>;
             key-positions = <11 13>;
+            require-prior-idle-ms = <100>;
+            layers = <0 1>;
+        };
+
+        combo_backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <1 2>;
+            require-prior-idle-ms = <100>;
+            layers = <0 1>;
+        };
+
+        combo_delete {
+            bindings = <&kp DELETE>;
+            key-positions = <2 3>;
             require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
@@ -268,7 +282,7 @@
             bindings = <
                &kp Q        &kp W       &kp F               &kp P        &kp B    &kp J           &kp L        &kp U                &kp Y       &kp BACKSLASH
                &mt LCTRL A  &mt LALT R  &mt LEFT_COMMAND S  &mt LSHFT T  &kp G    &kp M           &mt RSHFT N  &mt RIGHT_COMMAND E  &mt RALT I  &mt RCTRL O
-&kp SEMICOLON  &kp Z        &kp X       &kp C               &kp D        &kp V    &kp K           &kp H        &kp COMMA            &kp DOT     &kp QUESTION   &kp APOSTROPHE
+&kp SEMICOLON  &kp Z        &kp X       &kp C               &kp D        &kp V    &kp K           &kp H        &kp COMMA            &kp DOT     &kp LS(QUESTION)  &kp APOSTROPHE
                                         &lt 3 BACKSPACE     &lt 2 SPACE  &sl 1    &sk LEFT_SHIFT  &lt 4 RET    &lt 5 DELETE
             >;
         };
@@ -301,10 +315,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &none       &none                    &kp UP_ARROW                 &none                  &kp PAGE_UP      &kp PAGE_UP    &kp INSERT      &kp UP_ARROW    &kp HOME         &kp END
-            &kp LCTRL   &mt LEFT_ALT LEFT_ARROW  &mt LEFT_COMMAND DOWN_ARROW  &mt LCTRL RIGHT_ARROW  &none            &kp TAB        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none
-&kp K_REDO  &kp K_UNDO  &kp K_CUT                &kp K_COPY                   &kp K_PASTE            &kp PAGE_DOWN    &kp PAGE_DOWN  &kp K_PASTE     &kp K_COPY      &kp K_CUT        &kp K_UNDO  &kp K_REDO
-                                                 &none                        &none                  &none            &kp K_BACK     &kp F13         &kp K_FORWARD
+            &none       &none                    &kp UP_ARROW                 &none                  &kp PAGE_UP      &kp PAGE_UP    &kp LG(SEMICOLON)  &kp UP_ARROW    &kp LG(APOSTROPHE)  &kp INSERT
+            &kp LCTRL   &mt LEFT_ALT LEFT_ARROW  &mt LEFT_COMMAND DOWN_ARROW  &mt LCTRL RIGHT_ARROW  &none            &kp HOME       &kp LEFT_ARROW     &kp DOWN_ARROW  &kp RIGHT_ARROW     &kp END
+&kp K_REDO  &kp K_UNDO  &kp K_CUT                &kp K_COPY                   &kp K_PASTE            &kp PAGE_DOWN    &kp PAGE_DOWN  &kp K_PASTE        &kp K_COPY      &kp K_CUT           &kp K_UNDO  &kp K_REDO
+                                                 &none                        &none                  &none            &kp K_BACK     &kp F13            &kp K_FORWARD
             >;
         };
 
