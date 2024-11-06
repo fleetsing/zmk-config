@@ -290,7 +290,7 @@
                &kp Q             &kp W        &kp F           &kp P               &kp B    &kp J           &kp L                &kp U            &kp Y        &kp BACKSLASH
                &mt LEFT_SHIFT A  &mt LCTRL R  &mt LEFT_ALT S  &mt LEFT_COMMAND T  &kp G    &kp M           &mt RIGHT_COMMAND N  &mt RIGHT_ALT E  &mt RCTRL I  &mt RIGHT_SHIFT O
 &kp SEMICOLON  &kp Z             &kp X        &kp C           &kp D               &kp V    &kp K           &kp H                &kp COMMA        &kp DOT      &kp LS(QUESTION)   &kp APOSTROPHE
-                                              &mo 2           &lt 4 SPACE         &sl 1    &sk LEFT_SHIFT  &lt 4 BACKSPACE      &mo 3
+                                              &mo 2           &lt 5 SPACE         &sl 1    &sk LEFT_SHIFT  &lt 4 BACKSPACE      &mo 3
             >;
         };
 
@@ -340,24 +340,24 @@
             label = "MOUSE";
         };
 
-        hyper_layer {
+        hyper_left_layer {
             bindings = <
-                               &kp LS(LA(LC(LG(Q))))  &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(P))))  &kp LS(LA(LC(LG(B))))    &none  &none           &kp UP_ARROW    &none            &none
-                               &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(S))))  &kp LS(LA(LC(LG(T))))  &kp LS(LA(LC(LG(G))))    &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none
-&kp LS(LA(LC(LG(SEMICOLON))))  &kp LS(LA(LC(LG(Z))))  &kp LS(LC(LA(LG(X))))  &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(D))))  &kp LS(LA(LC(LG(V))))    &none  &none           &none           &none            &none  &none
+                               &kp LS(LA(LC(LG(Q))))  &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(P))))  &kp LS(LA(LC(LG(B))))    &none  &kp DELETE      &kp UP_ARROW    &none            &none
+                               &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(S))))  &kp LS(LA(LC(LG(T))))  &kp LS(LA(LC(LG(G))))    &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp RET
+&kp LS(LA(LC(LG(SEMICOLON))))  &kp LS(LA(LC(LG(Z))))  &kp LS(LC(LA(LG(X))))  &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(D))))  &kp LS(LA(LC(LG(V))))    &none  &none           &none           &none            &none    &none
                                                                              &kp F16                &kp F17                &kp F18                  &none  &none           &none
             >;
 
-            label = "HYPER";
+            label = "LHYPER";
         };
 
-        meh_layer {
-            label = "MEH";
+        hyper_right_layer {
+            label = "RHYPER";
             bindings = <
-                           &kp LA(LC(LG(Q)))  &kp LA(LC(LG(W)))  &kp LA(LC(LG(F)))  &kp LA(LC(LG(P)))  &kp LA(LC(LG(B)))    &none  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none             &none
-                           &kp LA(LC(LG(A)))  &kp LA(LC(LG(R)))  &kp LA(LC(LG(S)))  &kp LA(LC(LG(T)))  &kp LA(LC(LG(G)))    &none  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_MUTE        &none
-&kp LA(LC(LG(SEMICOLON)))  &kp LA(LC(LG(Z)))  &kp LC(LA(LG(X)))  &kp LA(LC(LG(C)))  &kp LA(LC(LG(D)))  &kp LA(LC(LG(V)))    &none  &kp C_PREV            &kp C_NEXT            &kp C_PLAY_PAUSE  &none  &none
-                                                                 &kp F19            &kp F20            &kp F21              &none  &none                 &none
+                           &kp LA(LC(LG(Q)))  &kp LA(LC(LG(W)))  &kp LA(LC(LG(F)))  &kp LA(LC(LG(P)))  &kp LA(LC(LG(B)))    &kp LS(LA(LC(LG(J))))  &kp LS(LA(LC(LG(L))))  &kp LS(LA(LC(LG(U))))      &kp LS(LA(LC(LG(Y))))    &kp LS(LC(LA(LG(BSLH))))
+                           &kp LA(LC(LG(A)))  &kp LA(LC(LG(R)))  &kp LA(LC(LG(S)))  &kp LA(LC(LG(T)))  &kp LA(LC(LG(G)))    &kp LS(LA(LC(LG(M))))  &kp LS(LA(LC(LG(N))))  &kp LS(LA(LC(LG(E))))      &kp LS(LA(LC(LG(I))))    &kp LS(LA(LC(LG(O))))
+&kp LA(LC(LG(SEMICOLON)))  &kp LA(LC(LG(Z)))  &kp LC(LA(LG(X)))  &kp LA(LC(LG(C)))  &kp LA(LC(LG(D)))  &kp LA(LC(LG(V)))    &kp LS(LA(LC(LG(K))))  &kp LS(LA(LC(LG(H))))  &kp LS(LA(LG(LC(COMMA))))  &kp LS(LA(LG(LC(DOT))))  &kp LS(LA(LC(LG(FSLH))))  &kp LS(LA(LC(LG(SEMI))))
+                                                                 &none              &none              &none                &kp F19                &kp F20                &kp F21
             >;
         };
 
@@ -378,10 +378,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &none   &bt BT_CLR  &out OUT_TOG  &trans  &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F12
-        &none   &bt BT_NXT  &trans        &trans  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&trans  &trans  &bt BT_PRV  &trans        &trans  &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
-                            &trans        &trans  &trans    &trans  &trans  &trans
+            &none   &out OUT_USB  &out OUT_TOG  &out OUT_BLE  &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F12
+            &none   &bt BT_PRV    &trans        &bt BT_NXT    &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11
+&bt BT_CLR  &trans  &none         &trans        &trans        &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
+                                  &trans        &trans        &trans    &trans  &trans  &trans
             >;
         };
     };
