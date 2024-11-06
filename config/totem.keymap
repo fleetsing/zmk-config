@@ -221,7 +221,7 @@
 
         combo_tilde {
             bindings = <&kp TILDE>;
-            key-positions = <4 14>;
+            key-positions = <3 1>;
             require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
@@ -240,13 +240,6 @@
             layers = <0 1>;
         };
 
-        combo_pound_sign {
-            bindings = <&kp LA(NUMBER_3)>;
-            key-positions = <14 25>;
-            require-prior-idle-ms = <100>;
-            layers = <0 1>;
-        };
-
         combo_next_space {
             bindings = <&kp LA(LC(LG(O)))>;
             key-positions = <17 18>;
@@ -259,6 +252,20 @@
             key-positions = <16 17>;
             require-prior-idle-ms = <100>;
             layers = <4 5 2>;
+        };
+
+        combo_apostrophe {
+            bindings = <&kp APOSTROPHE>;
+            key-positions = <4 14>;
+            require-prior-idle-ms = <100>;
+            layers = <0 1>;
+        };
+
+        combo_double_quotes {
+            bindings = <&kp LS(NUMBER_2)>;
+            key-positions = <14 25>;
+            require-prior-idle-ms = <100>;
+            layers = <0 1>;
         };
     };
 
@@ -301,7 +308,7 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-               &kp Q             &kp W        &kp F           &kp P               &kp B    &kp J           &kp L                &kp U            &kp Y        &kp BACKSLASH
+               &kp Q             &kp W        &kp F           &kp P               &kp B    &kp J           &kp L                &kp U            &kp Y        &kp LEFT_BRACKET
                &mt LEFT_SHIFT A  &mt LCTRL R  &mt LEFT_ALT S  &mt LEFT_COMMAND T  &kp G    &kp M           &mt RIGHT_COMMAND N  &mt RIGHT_ALT E  &mt RCTRL I  &mt RIGHT_SHIFT O
 &kp SEMICOLON  &kp Z             &kp X        &kp C           &kp D               &kp V    &kp K           &kp H                &kp COMMA        &kp DOT      &kp LS(QUESTION)   &kp APOSTROPHE
                                               &mo 2           &lt 5 SPACE         &sl 1    &sk LEFT_SHIFT  &lt 4 BACKSPACE      &mo 3
