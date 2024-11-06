@@ -246,6 +246,20 @@
             require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
+
+        combo_next_space {
+            bindings = <&kp LA(LC(LG(O)))>;
+            key-positions = <17 18>;
+            require-prior-idle-ms = <100>;
+            layers = <4 5 2>;
+        };
+
+        combo_previous_space {
+            bindings = <&kp LA(LC(LG(U)))>;
+            key-positions = <16 17>;
+            require-prior-idle-ms = <100>;
+            layers = <4 5 2>;
+        };
     };
 
     macros {
