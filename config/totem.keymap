@@ -280,10 +280,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-               &kp Q        &kp W       &kp F               &kp P        &kp B    &kp J           &kp L        &kp U                &kp Y       &kp BACKSLASH
-               &mt LCTRL A  &mt LALT R  &mt LEFT_COMMAND S  &mt LSHFT T  &kp G    &kp M           &mt RSHFT N  &mt RIGHT_COMMAND E  &mt RALT I  &mt RCTRL O
-&kp SEMICOLON  &kp Z        &kp X       &kp C               &kp D        &kp V    &kp K           &kp H        &kp COMMA            &kp DOT     &kp LS(QUESTION)  &kp APOSTROPHE
-                                        &lt 3 BACKSPACE     &lt 2 SPACE  &sl 1    &sk LEFT_SHIFT  &lt 4 RET    &lt 5 DELETE
+               &kp Q             &kp W        &kp F            &kp P               &kp B    &kp J           &kp L                &kp U            &kp Y        &kp BACKSLASH
+               &mt LEFT_SHIFT A  &mt LCTRL R  &mt LEFT_ALT S   &mt LEFT_COMMAND T  &kp G    &kp M           &mt RIGHT_COMMAND N  &mt RIGHT_ALT E  &mt RCTRL I  &mt RIGHT_SHIFT O
+&kp SEMICOLON  &kp Z             &kp X        &kp C            &kp D               &kp V    &kp K           &kp H                &kp COMMA        &kp DOT      &kp LS(QUESTION)   &kp APOSTROPHE
+                                              &lt 3 BACKSPACE  &lt 2 SPACE         &sl 1    &sk LEFT_SHIFT  &lt 4 RET            &lt 5 DELETE
             >;
         };
 
@@ -315,19 +315,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &none       &none                    &kp UP_ARROW                 &none                  &kp PAGE_UP      &kp PAGE_UP    &kp LG(SEMICOLON)  &kp UP_ARROW    &kp LG(APOSTROPHE)  &kp INSERT
-            &kp LCTRL   &mt LEFT_ALT LEFT_ARROW  &mt LEFT_COMMAND DOWN_ARROW  &mt LCTRL RIGHT_ARROW  &none            &kp HOME       &kp LEFT_ARROW     &kp DOWN_ARROW  &kp RIGHT_ARROW     &kp END
-&kp K_REDO  &kp K_UNDO  &kp K_CUT                &kp K_COPY                   &kp K_PASTE            &kp PAGE_DOWN    &kp PAGE_DOWN  &kp K_PASTE        &kp K_COPY      &kp K_CUT           &kp K_UNDO  &kp K_REDO
-                                                 &none                        &none                  &none            &kp K_BACK     &kp F13            &kp K_FORWARD
+            &none           &none                 &kp UP_ARROW             &none                         &kp PAGE_UP      &kp PAGE_UP    &kp LG(SEMICOLON)  &kp UP_ARROW    &kp LG(APOSTROPHE)  &kp INSERT
+            &kp LEFT_SHIFT  &mt LCTRL LEFT_ARROW  &mt LEFT_ALT DOWN_ARROW  &mt LEFT_COMMAND RIGHT_ARROW  &none            &kp HOME       &kp LEFT_ARROW     &kp DOWN_ARROW  &kp RIGHT_ARROW     &kp END
+&kp K_REDO  &kp K_UNDO      &kp K_CUT             &kp K_COPY               &kp K_PASTE                   &kp PAGE_DOWN    &kp PAGE_DOWN  &kp K_PASTE        &kp K_COPY      &kp K_CUT           &kp K_UNDO  &kp K_REDO
+                                                  &none                    &none                         &none            &kp F13        &kp F14            &kp F15
             >;
         };
 
         mouse_layer {
             bindings = <
-       &none      &none     &none             &none           &none    &none  &none      &none      &none  &none
-       &kp LCTRL  &kp LALT  &kp LEFT_COMMAND  &kp LEFT_SHIFT  &none    &none  &none      &none      &none  &none
-&none  &none      &none     &none             &none           &none    &none  &none      &none      &none  &none  &none
-                            &none             &none           &none    &none  &mkp LCLK  &mkp RCLK
+       &none           &none      &none         &none             &none    &none  &none      &none      &none  &none
+       &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &none    &none  &none      &none      &none  &none
+&none  &none           &none      &none         &none             &none    &none  &none      &none      &none  &none  &none
+                                  &none         &none             &none    &none  &mkp LCLK  &mkp RCLK
             >;
 
             label = "MOUSE";
@@ -335,10 +335,10 @@
 
         hyper_layer {
             bindings = <
-                               &kp LS(LA(LC(LG(Q))))        &kp LS(LA(LC(LG(W))))           &kp LS(LA(LC(LG(F))))               &kp LS(LA(LC(LG(P))))             &kp LS(LA(LC(LG(B))))    &none  &none                 &kp UP_ARROW         &none                 &none
-                               &mt LCTRL LS(LA(LC(LG(A))))  &mt LEFT_ALT LS(LA(LC(LG(R))))  &mt LEFT_COMMAND LS(LA(LC(LG(S))))  &mt LEFT_SHIFT LS(LA(LC(LG(T))))  &kp LS(LA(LC(LG(G))))    &none  &mt LSHFT LEFT_ARROW  &mt LGUI DOWN_ARROW  &mt LALT RIGHT_ARROW  &kp LCTRL
-&kp LS(LA(LC(LG(SEMICOLON))))  &kp LS(LA(LC(LG(Z))))        &kp LS(LC(LA(LG(X))))           &kp LS(LA(LC(LG(C))))               &kp LS(LA(LC(LG(D))))             &kp LS(LA(LC(LG(V))))    &none  &none                 &kp COMMA            &kp DOT               &kp FSLH   &none
-                                                                                            &kp F16                             &kp F17                           &kp F18                  &none  &none                 &none
+                               &kp LS(LA(LC(LG(Q))))  &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(P))))  &kp LS(LA(LC(LG(B))))    &none  &none           &kp UP_ARROW    &none            &none
+                               &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(S))))  &kp LS(LA(LC(LG(T))))  &kp LS(LA(LC(LG(G))))    &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none
+&kp LS(LA(LC(LG(SEMICOLON))))  &kp LS(LA(LC(LG(Z))))  &kp LS(LC(LA(LG(X))))  &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(D))))  &kp LS(LA(LC(LG(V))))    &none  &none           &none           &none            &none  &none
+                                                                             &kp F16                &kp F17                &kp F18                  &none  &none           &none
             >;
 
             label = "HYPER";
@@ -347,10 +347,10 @@
         meh_layer {
             label = "MEH";
             bindings = <
-                           &kp LA(LC(LG(Q)))        &kp LA(LC(LG(W)))           &kp LA(LC(LG(F)))               &kp LA(LC(LG(P)))             &kp LA(LC(LG(B)))    &none  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_BACKLIGHT_TOGGLE  &none
-                           &mt LCTRL LA(LC(LG(A)))  &mt LEFT_ALT LA(LC(LG(R)))  &mt LEFT_COMMAND LA(LC(LG(S)))  &mt LEFT_SHIFT LA(LC(LG(T)))  &kp LA(LC(LG(G)))    &none  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp K_MUTE              &none
-&kp LA(LC(LG(SEMICOLON)))  &kp LA(LC(LG(Z)))        &kp LC(LA(LG(X)))           &kp LA(LC(LG(C)))               &kp LA(LC(LG(D)))             &kp LA(LC(LG(V)))    &none  &kp C_PREV            &kp C_NEXT            &kp C_PLAY_PAUSE        &none  &none
-                                                                                &kp F19                         &kp F20                       &kp F21              &none  &none                 &none
+                           &kp LA(LC(LG(Q)))  &kp LA(LC(LG(W)))  &kp LA(LC(LG(F)))  &kp LA(LC(LG(P)))  &kp LA(LC(LG(B)))    &none  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none             &none
+                           &kp LA(LC(LG(A)))  &kp LA(LC(LG(R)))  &kp LA(LC(LG(S)))  &kp LA(LC(LG(T)))  &kp LA(LC(LG(G)))    &none  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_MUTE        &none
+&kp LA(LC(LG(SEMICOLON)))  &kp LA(LC(LG(Z)))  &kp LC(LA(LG(X)))  &kp LA(LC(LG(C)))  &kp LA(LC(LG(D)))  &kp LA(LC(LG(V)))    &none  &kp C_PREV            &kp C_NEXT            &kp C_PLAY_PAUSE  &none  &none
+                                                                 &kp F19            &kp F20            &kp F21              &none  &none                 &none
             >;
         };
 
