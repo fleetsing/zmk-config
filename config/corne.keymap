@@ -61,7 +61,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "Super Shift";
             #binding-cells = <0>;
-            bindings = <&lts 7 LEFT_SHIFT>, <&caps_word>, <&kp CAPSLOCK>;
+            bindings = <&lts 8 LEFT_SHIFT>, <&caps_word>, <&kp CAPSLOCK>;
         };
 
         numfun: numbers_functions {
@@ -277,7 +277,7 @@
   &kp ESCAPE        &kp Z           &kp G               &kp B           &kp X                         &kp W                        &kp V            &kp P                &kp Q            &kp LEFT_BRACKET
   &hm LEFT_SHIFT A  &hm LEFT_ALT E  &hm LEFT_CONTROL R  &hm LEFT_GUI T  &hm LC(LA(LS(LEFT_GUI))) F    &hm RC(RA(RS(RIGHT_GUI))) M  &hm RIGHT_GUI S  &hm RIGHT_CONTROL N  &hm RIGHT_ALT I  &hm RIGHT_SHIFT O
   &kp SEMICOLON     &kp U           &kp H               &kp L           &hm LC(LA(LEFT_GUI)) D        &hm RC(RA(RIGHT_GUI)) C      &kp J            &kp K                &kp Y            &kp APOS
-                                    &key_repeat         &numfun         &lt 2 SPACE                   &lt 2 ENTER                  &ss              &mo 7
+                                    &key_repeat         &numfun         &lt 2 SPACE                   &lt 2 ENTER                  &ss              &mo 8
             >;
         };
 
@@ -287,7 +287,7 @@
   &kp ESCAPE        &kp Z           &kp G           &kp B               &kp X                         &kp W                        &kp V                &kp P            &kp Q            &kp LEFT_BRACKET
   &hm LEFT_SHIFT A  &hm LEFT_ALT E  &hm LEFT_GUI R  &hm LEFT_CONTROL T  &hm LC(LA(LS(LEFT_GUI))) F    &hm RC(RA(RS(RIGHT_GUI))) M  &hm RIGHT_CONTROL S  &hm RIGHT_GUI N  &hm RIGHT_ALT I  &hm RIGHT_SHIFT O
   &kp SEMICOLON     &kp U           &kp H           &kp L               &hm LC(LA(LEFT_GUI)) D        &hm RC(RA(RIGHT_GUI)) C      &kp J                &kp K            &kp Y            &kp APOS
-                                    &key_repeat     &numfun             &lt 2 SPACE                   &lt 2 ENTER                  &ss                  &mo 7
+                                    &key_repeat     &numfun             &lt 2 SPACE                   &lt 2 ENTER                  &ss                  &mo 8
             >;
         };
 
@@ -346,13 +346,36 @@
             label = "Fun";
         };
 
-        numpad_sym {
+        pc_fun_layer {
+            label = "FUN";
             bindings = <
-  &kp EXCLAMATION  &kp CARET      &kp DOLLAR          &kp LEFT_BRACE              &kp RIGHT_BRACE          &none   &none   &none  &kp NUMBER_9  &none
-  &hm LCTRL AT     &hm LALT PIPE  &hm LGUI AMPERSAND  &hm LSHFT LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &none   &none   &none  &none         &none
-  &kp PERCENT      &kp HASH       &kp ASTERISK        &kp LEFT_BRACKET            &kp RBKT                 &none   &none   &none  &none         &none
-                                  &kp GRAVE           &mt LEFT_GUI UNDERSCORE     &trans                   &trans  &trans  &none
+  &trans  &trans  &trans        &trans            &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &kp LEFT_GUI  &kp LEFT_CONTROL  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans        &trans            &trans    &trans  &trans  &trans  &trans  &trans
+                  &trans        &trans            &trans    &trans  &trans  &trans
             >;
+        };
+
+        media_layer {
+            bindings = <
+  &none  &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT       &none            &none  &none           &kp UP_ARROW    &none            &none
+  &none  &kp C_VOLUME_DOWN  &kp C_MUTE        &kp C_VOLUME_UP  &none            &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none
+  &none  &kp LG(X)          &kp LG(C)         &kp LG(V)        &kp LG(LS(V))    &none  &none           &none           &none            &none
+                            &none             &none            &none            &none  &none           &tog 8
+            >;
+
+            label = "Media";
+        };
+
+        pc_media_layer {
+            bindings = <
+  &trans  &trans     &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans     &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans    &trans  &trans  &trans  &trans  &trans
+                     &trans     &trans     &trans    &trans  &trans  &trans
+            >;
+
+            label = "MEDIA";
         };
 
         VIM {
@@ -400,25 +423,6 @@
             >;
         };
 
-        dvorak_acute {
-            label = "dvorak_acute";
-            bindings = <
-  &trans   &trans   &trans   &trans   &trans     &trans  &trans  &trans  &trans  &trans
-  &aacute  &oacute  &eacute  &uacute  &iacute    &trans  &trans  &trans  &trans  &trans
-  &trans   &trans   &trans   &trans   &trans     &trans  &trans  &trans  &trans  &trans
-                    &trans   &trans   &trans     &trans  &trans  &trans
-            >;
-        };
-
-        dvorak_circ {
-            bindings = <
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &acirc  &ocirc  &ecirc  &ucirc  &icirc    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
         dvorak_tilde {
             bindings = <
   &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
@@ -449,6 +453,11 @@
         pc_numbers {
             if-layers = <1 4>;
             then-layer = <5>;
+        };
+
+        pc_functions {
+            if-layers = <1 6>;
+            then-layer = <7>;
         };
     };
 };
