@@ -61,14 +61,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "Super Shift";
             #binding-cells = <0>;
-            bindings = <&lts 6 LEFT_SHIFT>, <&caps_word>, <&kp CAPSLOCK>;
+            bindings = <&lts 7 LEFT_SHIFT>, <&caps_word>, <&kp CAPSLOCK>;
         };
 
         numfun: numbers_functions {
             compatible = "zmk,behavior-tap-dance";
             label = "Numbers-Functions Tap-Dance";
             #binding-cells = <0>;
-            bindings = <&mo 4>, <&mo 5>;
+            bindings = <&mo 5>, <&mo 6>;
         };
     };
 
@@ -277,7 +277,7 @@
   &kp ESCAPE        &kp Z           &kp G               &kp B           &kp X                         &kp W                        &kp V            &kp P                &kp Q            &kp LEFT_BRACKET
   &hm LEFT_SHIFT A  &hm LEFT_ALT E  &hm LEFT_CONTROL R  &hm LEFT_GUI T  &hm LC(LA(LS(LEFT_GUI))) F    &hm RC(RA(RS(RIGHT_GUI))) M  &hm RIGHT_GUI S  &hm RIGHT_CONTROL N  &hm RIGHT_ALT I  &hm RIGHT_SHIFT O
   &kp SEMICOLON     &kp U           &kp H               &kp L           &hm LC(LA(LEFT_GUI)) D        &hm RC(RA(RIGHT_GUI)) C      &kp J            &kp K                &kp Y            &kp APOS
-                                    &key_repeat         &numfun         &lt 2 SPACE                   &lt 2 ENTER                  &ss              &mo 6
+                                    &key_repeat         &numfun         &lt 2 SPACE                   &lt 2 ENTER                  &ss              &mo 7
             >;
         };
 
@@ -287,50 +287,63 @@
   &kp ESCAPE        &kp Z           &kp G           &kp B               &kp X                         &kp W                        &kp V                &kp P            &kp Q            &kp LEFT_BRACKET
   &hm LEFT_SHIFT A  &hm LEFT_ALT E  &hm LEFT_GUI R  &hm LEFT_CONTROL T  &hm LC(LA(LS(LEFT_GUI))) F    &hm RC(RA(RS(RIGHT_GUI))) M  &hm RIGHT_CONTROL S  &hm RIGHT_GUI N  &hm RIGHT_ALT I  &hm RIGHT_SHIFT O
   &kp SEMICOLON     &kp U           &kp H           &kp L               &hm LC(LA(LEFT_GUI)) D        &hm RC(RA(RIGHT_GUI)) C      &kp J                &kp K            &kp Y            &kp APOS
-                                    &key_repeat     &numfun             &lt 2 SPACE                   &lt 2 ENTER                  &ss                  &mo 6
+                                    &key_repeat     &numfun             &lt 2 SPACE                   &lt 2 ENTER                  &ss                  &mo 7
             >;
         };
 
-        navigation_layer {
+        nav_layer {
             bindings = <
-  &none               &none       &kp LG(Z)                 &kp LG(LS(Z))         &none                       &none                      &kp END                  &kp HOME                   &none            &none
-  &kp K_CONTEXT_MENU  &kp INSERT  &mt LEFT_CONTROL LG(F15)  &mt LEFT_GUI LG(F16)  &kp LC(LA(LS(LEFT_GUI)))    &kp RC(RA(RS(RIGHT_GUI)))  &mt RIGHT_GUI PAGE_DOWN  &mt RIGHT_CONTROL PAGE_UP  &kp PAUSE_BREAK  &kp SCROLLLOCK
-  &none               &none       &kp LEFT_ARROW            &kp RIGHT_ARROW       &kp LC(LA(LEFT_GUI))        &kp RC(RA(RIGHT_GUI))      &kp DOWN_ARROW           &kp UP_ARROW               &none            &none
-                                  &key_repeat               &none                 &kp SPACE                   &kp ENTER                  &none                    &tog 2
+  &none                          &none                &kp LG(Z)                 &kp LG(LS(Z))         &none                       &none                      &kp END                  &kp HOME                   &none                      &none
+  &mt LEFT_SHIFT K_CONTEXT_MENU  &mt LEFT_ALT INSERT  &mt LEFT_CONTROL LG(F15)  &mt LEFT_GUI LG(F16)  &kp LC(LA(LS(LEFT_GUI)))    &kp RC(RA(RS(RIGHT_GUI)))  &mt RIGHT_GUI PAGE_DOWN  &mt RIGHT_CONTROL PAGE_UP  &mt RIGHT_ALT PAUSE_BREAK  &mt RIGHT_SHIFT SCROLLLOCK
+  &none                          &none                &kp LEFT_ARROW            &kp RIGHT_ARROW       &kp LC(LA(LEFT_GUI))        &kp RC(RA(RIGHT_GUI))      &kp DOWN_ARROW           &kp UP_ARROW               &none                      &none
+                                                      &key_repeat               &none                 &kp SPACE                   &kp ENTER                  &none                    &tog 2
             >;
 
             label = "Nav";
         };
 
-        acute {
+        pc_nav_layer {
             bindings = <
-  &trans   &trans  &eacute  &trans  &trans    &trans  &uacute  &iacute  &oacute  &trans
-  &aacute  &trans  &trans   &trans  &trans    &trans  &trans   &trans   &trans   &trans
-  &trans   &trans  &trans   &trans  &trans    &trans  &trans   &trans   &trans   &trans
-                   &trans   &trans  &trans    &trans  &trans   &trans
+  &trans  &trans  &kp RC(Z)                    &kp LC(LS(Z))                     &trans    &trans  &trans                       &trans                 &trans  &trans
+  &trans  &trans  &mt LEFT_GUI LA(LEFT_ARROW)  &mt LEFT_CONTROL LA(RIGHT_ARROW)  &trans    &trans  &mt RIGHT_CONTROL PAGE_DOWN  &mt RIGHT_GUI PAGE_UP  &trans  &trans
+  &trans  &trans  &trans                       &trans                            &trans    &trans  &trans                       &trans                 &trans  &trans
+                  &trans                       &trans                            &trans    &trans  &trans                       &trans
             >;
 
-            label = "acute";
+            label = "NAV";
         };
 
-        circ {
+        num_layer {
             bindings = <
-  &trans  &trans  &ecirc  &trans  &trans    &trans  &ucirc  &icirc  &ocirc  &trans
-  &acirc  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans    &trans  &trans  &trans
+  &none           &none         &none             &none         &none        &none      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
+  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_GUI  &none        &none      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0
+  &none           &none         &none             &none         &none        &none      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none
+                                &none             &none         &kp SPACE    &kp ENTER  &none         &tog 4
             >;
 
-            label = "circ";
+            label = "Num";
         };
 
-        tilde {
+        pc_num_layer {
             bindings = <
-  &trans   &trans  &trans     &trans  &trans    &trans  &trans     &trans  &oes    &trans
-  &atilde  &ao     &aes       &trans  &trans    &trans  &trans     &trans  &trans  &trans
-  &trans   &trans  &kp LA(C)  &trans  &trans    &trans  &kp TILDE  &trans  &trans  &trans
-                   &trans     &trans  &trans    &trans  &trans     &trans
+  &trans  &trans  &trans        &trans            &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &kp LEFT_GUI  &kp LEFT_CONTROL  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans        &trans            &trans    &trans  &trans  &trans  &trans  &trans
+                  &trans        &trans            &trans    &trans  &trans  &trans
             >;
+
+            label = "NUM";
+        };
+
+        fun_layer {
+            bindings = <
+  &none           &none         &none             &none         &none    &none  &kp F7  &kp F8  &kp F9  &kp F12
+  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_GUI  &none    &none  &kp F4  &kp F5  &kp F6  &kp F11
+  &none           &none         &none             &none         &none    &none  &kp F1  &kp F2  &kp F3  &kp F10
+                                &none             &none         &none    &none  &none   &tog 6
+            >;
+
+            label = "Fun";
         };
 
         numpad_sym {
@@ -422,6 +435,20 @@
   &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
                    &trans  &trans  &none     &trans  &trans  &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        pc_navigation {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+
+        pc_numbers {
+            if-layers = <1 4>;
+            then-layer = <5>;
         };
     };
 };
