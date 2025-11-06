@@ -427,8 +427,8 @@
             label = "PC";
             bindings = <
   &mo 9             &kp Z           &kp G           &kp B               &kp X                         &kp W                        &kp V                &kp P            &kp Q            &kp LEFT_BRACKET
-  &hm LEFT_SHIFT A  &hm LEFT_ALT E  &hm LEFT_GUI R  &hm LEFT_CONTROL T  &hm LC(LA(LS(LEFT_GUI))) F    &hm RC(RA(RS(RIGHT_GUI))) M  &hm RIGHT_CONTROL S  &hm RIGHT_GUI N  &hm RIGHT_ALT I  &hm RIGHT_SHIFT O
-  &kp SEMICOLON     &kp U           &kp H           &kp L               &hm LC(LA(LEFT_GUI)) D        &hm RC(RA(RIGHT_GUI)) C      &kp J                &kp K            &kp Y            &kp APOS
+  &hm LEFT_SHIFT O  &hm LEFT_ALT I  &hm LEFT_GUI R  &hm LEFT_CONTROL T  &hm LC(LA(LS(LEFT_GUI))) F    &hm RC(RA(RS(RIGHT_GUI))) M  &hm RIGHT_CONTROL S  &hm RIGHT_GUI N  &hm RIGHT_ALT E  &hm RIGHT_SHIFT A
+  &kp APOSTROPHE    &kp U           &kp H           &kp L               &hm LC(LA(LEFT_GUI)) D        &hm RC(RA(RIGHT_GUI)) C      &kp J                &kp K            &kp Y            &kp SEMI
                                     &key_repeat     &numfun             &lt 2 SPACE                   &lt 2 ENTER                  &ss                  &mo 8
             >;
         };
