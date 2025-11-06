@@ -6,7 +6,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
@@ -371,10 +370,10 @@
 
         board_layer {
             bindings = <
-  &trans  &none  &none  &none  &none    &ext_power EP_TOG  &out OUT_USB   &out OUT_BLE   &htb BT_CLR 0  &htb BT_CLR_ALL 0
-  &none   &none  &none  &none  &none    &bt BT_SEL 0       &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4
-  &none   &none  &none  &none  &none    &bt BT_DISC 0      &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4
-                 &none  &to 0  &to 1    &none              &none          &none
+  &trans  &none  &none  &none  &none    &none          &out OUT_USB   &out OUT_BLE   &none          &none
+  &none   &none  &none  &none  &none    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4
+  &none   &none  &none  &none  &none    &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4
+                 &none  &to 0  &to 1    &to 1          &to 0          &none
             >;
 
             label = "Board";
