@@ -416,9 +416,9 @@
         macos_layer {
             label = "MacOS";
             bindings = <
-  &mo 9             &kp Z           &kp G               &kp B           &kp X                         &kp W                        &kp V            &kp P                &kp Q            &kp LEFT_BRACKET
-  &hm LEFT_SHIFT O  &hm LEFT_ALT I  &hm LEFT_CONTROL R  &hm LEFT_GUI T  &hm LC(LA(LS(LEFT_GUI))) F    &hm RC(RA(RS(RIGHT_GUI))) M  &hm RIGHT_GUI S  &hm RIGHT_CONTROL N  &hm RIGHT_ALT E  &hm RIGHT_SHIFT A
-  &kp APOS          &kp U           &kp H               &kp L           &hm LC(LA(LEFT_GUI)) D        &hm RC(RA(RIGHT_GUI)) C      &kp J            &kp K                &kp Y            &kp SEMI
+  &kp Q             &kp Z           &kp SEMICOLON       &none           &kp LEFT_BRACKET              &kp V                        &kp D            &kp C                &kp F            &kp W
+  &hm LEFT_SHIFT H  &hm LEFT_ALT A  &hm LEFT_CONTROL E  &hm LEFT_GUI I  &hm LC(LA(LS(LEFT_GUI))) Y    &hm RC(RA(RS(RIGHT_GUI))) G  &hm RIGHT_GUI T  &hm RIGHT_CONTROL R  &hm RIGHT_ALT N  &hm RIGHT_SHIFT S
+  &kp B             &kp APOSTROPHE  &kp O               &kp U           &hm LC(LA(LEFT_GUI)) X        &hm RC(RA(RIGHT_GUI)) P      &kp J            &kp K                &kp L            &kp M
                                     &key_repeat         &numfun         &lt 2 SPACE                   &lt 2 ENTER                  &ss              &key_repeat
             >;
         };
@@ -426,9 +426,9 @@
         pc_layer {
             label = "PC";
             bindings = <
-  &mo 9             &kp Z           &kp G           &kp B               &kp X                         &kp W                        &kp V                &kp P            &kp Q            &kp LEFT_BRACKET
-  &hm LEFT_SHIFT O  &hm LEFT_ALT I  &hm LEFT_GUI R  &hm LEFT_CONTROL T  &hm LC(LA(LS(LEFT_GUI))) F    &hm RC(RA(RS(RIGHT_GUI))) M  &hm RIGHT_CONTROL S  &hm RIGHT_GUI N  &hm RIGHT_ALT E  &hm RIGHT_SHIFT A
-  &kp APOSTROPHE    &kp U           &kp H           &kp L               &hm LC(LA(LEFT_GUI)) D        &hm RC(RA(RIGHT_GUI)) C      &kp J                &kp K            &kp Y            &kp SEMI
+  &kp Q             &kp Z           &kp SEMI        &none               &kp LEFT_BRACKET              &kp V                        &kp D                &kp C            &kp F            &kp W
+  &hm LEFT_SHIFT H  &hm LEFT_ALT A  &hm LEFT_GUI E  &hm LEFT_CONTROL I  &hm LC(LA(LS(LEFT_GUI))) Y    &hm RC(RA(RS(RIGHT_GUI))) G  &hm RIGHT_CONTROL T  &hm RIGHT_GUI R  &hm RIGHT_ALT N  &hm RIGHT_SHIFT S
+  &kp B             &kp APOS        &kp O           &kp U               &hm LC(LA(LEFT_GUI)) X        &hm RC(RA(RIGHT_GUI)) P      &kp J                &kp K            &kp L            &kp M
                                     &key_repeat     &numfun             &lt 2 SPACE                   &lt 2 ENTER                  &ss                  &mo 8
             >;
         };
