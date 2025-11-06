@@ -360,10 +360,10 @@
 
         media_layer {
             bindings = <
-  &none  &kp C_PREVIOUS        &kp C_PLAY_PAUSE  &kp C_NEXT            &kp LG(F17)    &none  &none           &kp UP_ARROW    &none            &none
-  &none  &kp C_VOLUME_DOWN     &kp C_MUTE        &kp C_VOLUME_UP       &kp LG(F18)    &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none
-  &none  &kp C_BRIGHTNESS_DEC  &kp LG(F17)       &kp C_BRIGHTNESS_INC  &kp LG(F19)    &none  &none           &none           &none            &none
-                               &none             &none                 &none          &none  &trans          &none
+  &none  &kp C_BRIGHTNESS_DEC  &kp LG(F17)           &kp C_BRIGHTNESS_INC  &kp LG(F17)    &none  &none           &kp UP_ARROW    &none            &none
+  &none  &kp C_VOLUME_DOWN     &kp C_MUTE            &kp C_VOLUME_UP       &kp LG(F18)    &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none
+  &none  &kp C_PREVIOUS        &kp LG(C_PLAY_PAUSE)  &kp C_NEXT            &kp LG(F19)    &none  &none           &none           &none            &none
+                               &none                 &none                 &none          &none  &trans          &none
             >;
 
             label = "Media";
