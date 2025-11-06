@@ -297,8 +297,8 @@
             layers = <0 4 1 5>;
         };
 
-        combo_asterisk_hash {
-            bindings = <&htc RS(NUMBER_3) RS(BACKSLASH)>;
+        combo_asterisk_percentage {
+            bindings = <&htc RS(NUMBER_5) RS(BACKSLASH)>;
             key-positions = <1 11>;
             layers = <0 4 1 5>;
         };
@@ -313,6 +313,72 @@
             bindings = <&htc RA(EQUAL) RS(NUMBER_7)>;
             key-positions = <11 21>;
             layers = <1 5>;
+        };
+
+        combo_colon_semicolon {
+            bindings = <&htc RS(COMMA) RS(PERIOD)>;
+            key-positions = <5 15>;
+            layers = <0 4 1 5>;
+        };
+
+        combo_tilde_pipe {
+            bindings = <&htc RA(NUMBER_7) RA(RIGHT_BRACKET)>;
+            key-positions = <15 25>;
+            layers = <0 4>;
+        };
+
+        combo_pc_tilde_pipe {
+            bindings = <&htc RA(BACKSLASH) RA(RIGHT_BRACKET)>;
+            key-positions = <15 25>;
+            layers = <1 5>;
+        };
+
+        combo_left_parenth_brace {
+            bindings = <&htc RS(RA(NUMBER_8)) RS(NUMBER_8)>;
+            key-positions = <6 16>;
+            layers = <0 4>;
+        };
+
+        combo_pc_left_parenth_brace {
+            bindings = <&htc RA(NUMBER_7) RS(NUMBER_8)>;
+            key-positions = <16 6>;
+            layers = <1 5>;
+        };
+
+        combo_left_bracket_lesser {
+            bindings = <&htc GRAVE RA(NUMBER_8)>;
+            key-positions = <16 26>;
+            layers = <0 4 1 5>;
+        };
+
+        combo_right_parenth_brace {
+            bindings = <&htc RA(RS(NUMBER_9)) RS(NUMBER_9)>;
+            key-positions = <7 17>;
+            layers = <0 4>;
+        };
+
+        combo_pc_right_parenth_brace {
+            bindings = <&htc RA(NUMBER_0) RS(NUMBER_9)>;
+            key-positions = <7 17>;
+            layers = <1 5>;
+        };
+
+        combo_right_bracket_greater {
+            bindings = <&htc RS(GRAVE) RA(NUMBER_9)>;
+            key-positions = <17 27>;
+            layers = <0 4 1 5>;
+        };
+
+        combo_apostrophe_quote {
+            bindings = <&htc RS(NUMBER_2) BACKSLASH>;
+            key-positions = <8 18>;
+            layers = <0 4 1 5>;
+        };
+
+        combo_ampersand_hash {
+            bindings = <&htc RS(NUMBER_3) RS(NUMBER_6)>;
+            key-positions = <18 28>;
+            layers = <0 4 1 5>;
         };
     };
 
