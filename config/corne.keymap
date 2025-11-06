@@ -276,6 +276,43 @@
         combo_period_question {
             bindings = <&htc RS(MINUS) PERIOD>;
             key-positions = <3 13>;
+            layers = <0 4 1 5>;
+        };
+
+        combo_comma_exclamation {
+            bindings = <&htc RS(NUMBER_1) COMMA>;
+            key-positions = <13 23>;
+            layers = <0 4 1 5>;
+        };
+
+        combo_plus_equals {
+            bindings = <&htc RS(NUMBER_0) MINUS>;
+            key-positions = <12 2>;
+            layers = <0 4 1 5>;
+        };
+
+        combo_minus_underscore {
+            bindings = <&htc RS(SLASH) SLASH>;
+            key-positions = <12 22>;
+            layers = <0 4 1 5>;
+        };
+
+        combo_asterisk_hash {
+            bindings = <&htc RS(NUMBER_3) RS(BACKSLASH)>;
+            key-positions = <1 11>;
+            layers = <0 4 1 5>;
+        };
+
+        combo_slash_backslash {
+            bindings = <&htc RS(RA(NUMBER_7)) RS(NUMBER_7)>;
+            key-positions = <11 21>;
+            layers = <0 4>;
+        };
+
+        combo_pc_slash_backslash {
+            bindings = <&htc RA(EQUAL) RS(NUMBER_7)>;
+            key-positions = <11 21>;
+            layers = <1 5>;
         };
     };
 
