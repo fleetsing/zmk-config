@@ -380,6 +380,34 @@
             key-positions = <18 28>;
             layers = <0 4 1 5>;
         };
+
+        combo_tab {
+            bindings = <&kp TAB>;
+            key-positions = <13 12>;
+            require-prior-idle-ms = <30>;
+            layers = <0 1 2 3 4 5>;
+        };
+
+        combo_tab_back {
+            bindings = <&kp RS(TAB)>;
+            key-positions = <12 11>;
+            layers = <0 1 2 3 4 5>;
+            require-prior-idle-ms = <30>;
+        };
+
+        combo_backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <16 17>;
+            layers = <0 1 2 3 4 5>;
+            require-prior-idle-ms = <30>;
+        };
+
+        combo_delete {
+            bindings = <&kp DELETE>;
+            key-positions = <17 18>;
+            require-prior-idle-ms = <30>;
+            layers = <0 1 2 3 4 5>;
+        };
     };
 
     keymap {
