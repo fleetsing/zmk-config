@@ -435,10 +435,10 @@
 
         nav_layer {
             bindings = <
-  &to 0                      &none                        &none                     &none                    &none                       &none   &none           &none           &none            &none
-  &mt LEFT_SHIFT SCROLLLOCK  &mt LEFT_ALT K_CONTEXT_MENU  &mt LEFT_CONTROL PAGE_UP  &mt LEFT_GUI LG(INSERT)  &kp LC(LA(LS(LEFT_GUI)))    &none   &kp F13         &kp UP_ARROW    &kp F14          &none
-  &none                      &kp HOME                     &kp PAGE_DOWN             &kp END                  &kp LC(LA(LEFT_GUI))        &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none
-                                                          &key_repeat               &none                    &trans                      &trans  &none           &tog 2
+  &to 0                      &none                        &none                     &none                &none                       &none   &none           &none           &none            &none
+  &mt LEFT_SHIFT SCROLLLOCK  &mt LEFT_ALT K_CONTEXT_MENU  &mt LEFT_CONTROL PAGE_UP  &mt LEFT_GUI INSERT  &kp LC(LA(LS(LEFT_GUI)))    &none   &kp F13         &kp UP_ARROW    &kp F14          &none
+  &none                      &kp HOME                     &kp PAGE_DOWN             &kp END              &kp LC(LA(LEFT_GUI))        &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none
+                                                          &key_repeat               &none                &trans                      &trans  &none           &tog 2
             >;
 
             label = "Nav";
