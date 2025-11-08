@@ -417,7 +417,7 @@
             label = "MacOS";
             bindings = <
   &kp W             &kp Q           &kp O               &kp U           &kp X                         &kp B                        &kp D            &kp F                &kp R            &kp Z
-  &hm LEFT_SHIFT G  &hm LEFT_ALT A  &hm LEFT_CONTROL E  &hm LEFT_GUI I  &hm LC(LA(LS(LEFT_GUI))) Y    &hm RC(RA(RS(RIGHT_GUI))) V  &hm RIGHT_GUI S  &hm RIGHT_CONTROL K  &hm RIGHT_ALT N  &hm RIGHT_SHIFT T
+  &hm LEFT_SHIFT G  &hm LEFT_ALT A  &hm LEFT_CONTROL E  &hm LEFT_GUI I  &hm LC(LA(LS(LEFT_GUI))) Y    &hm RC(RA(RS(RIGHT_GUI))) V  &hm RIGHT_GUI T  &hm RIGHT_CONTROL K  &hm RIGHT_ALT N  &hm RIGHT_SHIFT S
   &kp C             &kp APOSTROPHE  &kp SEMICOLON       &none           &hm LC(LA(LEFT_BRACKET)) X    &hm RC(RA(RIGHT_GUI)) P      &kp H            &kp J                &kp L            &kp M
                                     &key_repeat         &numfun         &lt 2 SPACE                   &lt 2 ENTER                  &ss              &key_repeat
             >;
@@ -428,7 +428,7 @@
             bindings = <
   &kp W             &kp Q           &kp O           &kp U               &kp X                              &kp B                        &kp D                &kp F            &kp R            &kp Z
   &hm LEFT_SHIFT G  &hm LEFT_ALT A  &hm LEFT_GUI E  &hm LEFT_CONTROL I  &hm LC(LA(LS(LEFT_GUI))) Y         &hm RC(RA(RS(RIGHT_GUI))) V  &hm RIGHT_CONTROL S  &hm RIGHT_GUI K  &hm RIGHT_ALT N  &hm RIGHT_SHIFT T
-  &kp C             &kp APOS        &kp SEMICOLON   &none               &hm LC(LA(LEFT_GUI)) LEFT_BRACE    &hm RC(RA(RIGHT_GUI)) P      &kp J                &kp K            &kp L            &kp M
+  &kp C             &kp APOS        &kp SEMICOLON   &none               &hm LC(LA(LEFT_GUI)) LEFT_BRACE    &hm RC(RA(RIGHT_GUI)) P      &kp H                &kp J            &kp L            &kp M
                                     &key_repeat     &numfun             &lt 2 SPACE                        &lt 2 ENTER                  &ss                  &mo 8
             >;
         };
