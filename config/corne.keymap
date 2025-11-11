@@ -419,7 +419,7 @@
   &kp W             &kp G           &kp D               &kp F           &kp B          &kp Q        &kp L            &kp U                &kp O            &kp Y
   &hm LEFT_SHIFT R  &hm LEFT_ALT S  &hm LEFT_CONTROL T  &hm LEFT_GUI N  &kp K          &kp J        &hm RIGHT_GUI H  &hm RIGHT_CONTROL E  &hm RIGHT_ALT A  &hm RIGHT_SHIFT I
   &kp X             &kp C           &kp M               &kp P           &kp V          &kp PERIOD   &kp COMMA        &kp SEMICOLON        &kp APOSTROPHE   &kp Z
-                                    &key_repeat         &numfun         &lt 2 SPACE    &lt 2 ENTER  &ss              &key_repeat
+                                    &key_repeat         &lt 2 SPACE     &key_repeat    &key_repeat  &ss              &kp ENTER
             >;
         };
 
