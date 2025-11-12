@@ -52,14 +52,25 @@
             compatible = "zmk,behavior-tap-dance";
             label = "Super Shift";
             #binding-cells = <0>;
-            bindings = <&lts 8 LEFT_SHIFT>, <&caps_word>, <&kp CAPSLOCK>;
+            bindings = <&lts 2 LEFT_SHIFT>, <&caps_word>, <&kp CAPSLOCK>;
         };
 
-        numfun: numbers_functions {
-            compatible = "zmk,behavior-tap-dance";
-            label = "Numbers-Functions Tap-Dance";
-            #binding-cells = <0>;
-            bindings = <&mo 5>, <&mo 6>;
+        hal: hal {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Hold-Arcane Left";
+            bindings = <&mo>, <&key_repeat>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        har: har {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Hold-Arcane Right";
+            bindings = <&mo>, <&key_repeat>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
         };
     };
 
@@ -416,10 +427,10 @@
         macos_layer {
             label = "MacOS";
             bindings = <
-  &kp W             &kp G           &kp D               &kp F           &kp B          &kp Q        &kp L            &kp U                &kp O            &kp Y
-  &hm LEFT_SHIFT R  &hm LEFT_ALT S  &hm LEFT_CONTROL T  &hm LEFT_GUI N  &kp K          &kp J        &hm RIGHT_GUI H  &hm RIGHT_CONTROL E  &hm RIGHT_ALT A  &hm RIGHT_SHIFT I
-  &kp X             &kp C           &kp M               &kp P           &kp V          &kp PERIOD   &kp COMMA        &kp SEMICOLON        &kp APOSTROPHE   &kp Z
-                                    &key_repeat         &lt 2 SPACE     &key_repeat    &key_repeat  &ss              &kp ENTER
+  &kp W             &kp G           &kp D               &kp F           &kp B       &kp Q                    &kp L                &kp U                &kp O            &kp Y
+  &hm LEFT_SHIFT R  &hm LEFT_ALT S  &hm LEFT_CONTROL T  &hm LEFT_GUI N  &kp K       &kp J                    &hm RIGHT_GUI H      &hm RIGHT_CONTROL E  &hm RIGHT_ALT A  &hm RIGHT_SHIFT I
+  &kp X             &kp C           &kp M               &kp P           &kp V       &mt RS(NUMBER_1) PERIOD  &mt RS(MINUS) COMMA  &kp SEMICOLON        &kp APOSTROPHE   &kp Z
+                                    &lt 9 ESCAPE        &lt 2 SPACE     &hal 4 0    &har 8 0                 &ss                  &kp ENTER
             >;
         };
 
@@ -435,10 +446,10 @@
 
         nav_layer {
             bindings = <
-  &to 0                      &kp K_CONTEXT_MENU  &kp PAGE_UP                 &kp INSERT        &none     &none   &kp F13         &kp UP_ARROW    &kp F14          &none
+  &none                      &kp K_CONTEXT_MENU  &kp PAGE_UP                 &kp INSERT        &none     &none   &kp F13         &kp UP_ARROW    &kp F14          &none
   &mt LEFT_SHIFT SCROLLLOCK  &mt LEFT_ALT HOME   &mt LEFT_CONTROL PAGE_DOWN  &mt LEFT_GUI END  &none     &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none
   &none                      &none               &none                       &none             &none     &none   &none           &none           &none            &none
-                                                 &key_repeat                 &none             &trans    &trans  &none           &tog 2
+                                                 &to 0                       &trans            &trans    &trans  &trans          &trans
             >;
 
             label = "Nav";
@@ -446,10 +457,10 @@
 
         pc_nav_layer {
             bindings = <
-  &to 1   &trans  &trans                  &trans                &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans                  &trans                &trans    &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &mt LEFT_GUI PAGE_DOWN  &mt LEFT_CONTROL END  &trans    &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans                  &trans                &trans    &trans  &trans  &trans  &trans  &trans
-                  &trans                  &trans                &trans    &trans  &trans  &trans
+                  &to 1                   &trans                &trans    &trans  &trans  &trans
             >;
 
             label = "NAV";
@@ -457,10 +468,10 @@
 
         num_layer {
             bindings = <
-  &to 0           &none         &none             &none         &none        &none      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
-  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_GUI  &none        &none      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0
-  &none           &none         &none             &none         &none        &none      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none
-                                &none             &trans        &kp SPACE    &kp ENTER  &none         &none
+  &none           &none         &none             &none         &none     &none  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
+  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_GUI  &none     &none  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0
+  &none           &none         &none             &none         &none     &none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none
+                                &to 0             &trans        &trans    &mo 6  &trans        &trans
             >;
 
             label = "Num";
@@ -468,10 +479,10 @@
 
         pc_num_layer {
             bindings = <
-  &to 1   &trans  &trans        &trans            &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans        &trans            &trans    &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &kp LEFT_GUI  &kp LEFT_CONTROL  &trans    &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans        &trans            &trans    &trans  &trans  &trans  &trans  &trans
-                  &trans        &trans            &trans    &trans  &trans  &trans
+                  &to 1         &trans            &trans    &trans  &trans  &trans
             >;
 
             label = "NUM";
@@ -479,10 +490,10 @@
 
         fun_layer {
             bindings = <
-  &to 0           &none         &none             &none         &none    &none  &kp F7  &kp F8  &kp F9  &kp F12
+  &none           &none         &none             &none         &none    &none  &kp F7  &kp F8  &kp F9  &kp F12
   &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_GUI  &none    &none  &kp F4  &kp F5  &kp F6  &kp F11
   &none           &none         &none             &none         &none    &none  &kp F1  &kp F2  &kp F3  &kp F10
-                                &none             &trans        &none    &none  &none   &tog 6
+                                &to 0             &none         &none    &none  &none   &none
             >;
 
             label = "Fun";
@@ -491,7 +502,7 @@
         pc_fun_layer {
             label = "FUN";
             bindings = <
-  &to 1   &trans  &trans        &trans            &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans        &trans            &trans    &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &kp LEFT_GUI  &kp LEFT_CONTROL  &trans    &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans        &trans            &trans    &trans  &trans  &trans  &trans  &trans
                   &trans        &trans            &trans    &trans  &trans  &trans
@@ -500,10 +511,10 @@
 
         media_layer {
             bindings = <
-  &none  &kp C_BRIGHTNESS_DEC  &kp LG(F17)           &kp C_BRIGHTNESS_INC  &kp LG(F17)    &none  &none   &none  &none  &none
-  &none  &kp C_VOLUME_DOWN     &kp C_MUTE            &kp C_VOLUME_UP       &kp LG(F18)    &none  &none   &none  &none  &none
-  &none  &kp C_PREVIOUS        &kp LG(C_PLAY_PAUSE)  &kp C_NEXT            &kp LG(F19)    &none  &none   &none  &none  &none
-                               &none                 &none                 &none          &none  &trans  &none
+  &none  &kp C_BRIGHTNESS_DEC  &kp LG(F17)           &kp C_BRIGHTNESS_INC  &kp LG(F17)    &none  &none  &none  &none  &none
+  &none  &kp C_VOLUME_DOWN     &kp C_MUTE            &kp C_VOLUME_UP       &kp LG(F18)    &none  &none  &none  &none  &none
+  &none  &kp C_PREVIOUS        &kp LG(C_PLAY_PAUSE)  &kp C_NEXT            &kp LG(F19)    &none  &none  &none  &none  &none
+                               &to 0                 &none                 &none          &none  &none  &none
             >;
 
             label = "Media";
@@ -511,10 +522,10 @@
 
         board_layer {
             bindings = <
-  &trans  &none  &none  &none  &none    &ext_power EP_TOG  &out OUT_USB   &out OUT_BLE   &none          &none
-  &none   &none  &none  &none  &none    &bt BT_SEL 0       &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4
-  &none   &none  &none  &none  &none    &bt BT_DISC 0      &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4
-                 &none  &to 0  &to 1    &to 1              &to 0          &none
+  &none  &none  &none  &none  &none    &ext_power EP_TOG  &out OUT_USB   &out OUT_BLE   &none          &none
+  &none  &none  &none  &none  &none    &bt BT_SEL 0       &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4
+  &none  &none  &none  &none  &none    &bt BT_DISC 0      &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4
+                &none  &to 0  &to 1    &to 1              &to 0          &none
             >;
 
             label = "Board";
