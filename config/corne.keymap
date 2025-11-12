@@ -254,18 +254,6 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_clear_profile {
-            bindings = <&bt BT_CLR>;
-            key-positions = <6 7>;
-            layers = <9>;
-        };
-
-        combo_clear_all_profiles {
-            bindings = <&bt BT_CLR_ALL>;
-            key-positions = <8 9>;
-            layers = <9>;
-        };
-
         combo_euro_dollar {
             bindings = <&htc RA(NUMBER_4) RS(NUMBER_4)>;
             key-positions = <4 14>;
@@ -284,14 +272,14 @@
             layers = <0 4 1 5>;
         };
 
-        combo_period_question {
-            bindings = <&htc RS(MINUS) PERIOD>;
+        combo_colon_semicolon {
+            bindings = <&htc RS(COMMA) RS(PERIOD)>;
             key-positions = <3 13>;
             layers = <0 4 1 5>;
         };
 
-        combo_comma_exclamation {
-            bindings = <&htc RS(NUMBER_1) COMMA>;
+        combo_apostrophe_quote {
+            bindings = <&htc RS(NUMBER_2) BACKSLASH>;
             key-positions = <13 23>;
             layers = <0 4 1 5>;
         };
@@ -326,8 +314,8 @@
             layers = <1 5>;
         };
 
-        combo_colon_semicolon {
-            bindings = <&htc RS(COMMA) RS(PERIOD)>;
+        combo_ampersand_hash {
+            bindings = <&htc RS(NUMBER_3) RS(NUMBER_6)>;
             key-positions = <5 15>;
             layers = <0 4 1 5>;
         };
@@ -380,13 +368,13 @@
             layers = <0 4 1 5>;
         };
 
-        combo_apostrophe_quote {
+        combo_apostrophe_quote_old {
             bindings = <&htc RS(NUMBER_2) BACKSLASH>;
             key-positions = <8 18>;
             layers = <0 4 1 5>;
         };
 
-        combo_ampersand_hash {
+        combo_ampersand_hash_old {
             bindings = <&htc RS(NUMBER_3) RS(NUMBER_6)>;
             key-positions = <18 28>;
             layers = <0 4 1 5>;
