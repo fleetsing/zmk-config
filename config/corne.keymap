@@ -418,11 +418,14 @@
             bindings = <&tog 2>;
             key-positions = <16 18>;
             layers = <0 1 4 5>;
+            require-prior-idle-ms = <50>;
         };
 
         combo_num_layer {
             bindings = <&tog 4>;
             key-positions = <26 28>;
+            require-prior-idle-ms = <50>;
+            layers = <0 1 2 3>;
         };
     };
 
@@ -510,7 +513,7 @@
   &trans  &trans  &trans        &trans            &trans    &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &kp LEFT_GUI  &kp LEFT_CONTROL  &trans    &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans        &trans            &trans    &trans  &trans  &trans  &trans  &trans
-                  &trans        &trans            &trans    &trans  &trans  &trans
+                  &to 1         &trans            &trans    &trans  &trans  &trans
             >;
         };
 
