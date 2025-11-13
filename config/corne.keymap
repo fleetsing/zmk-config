@@ -55,7 +55,7 @@
             bindings = <&lts 2 LEFT_SHIFT>, <&caps_word>, <&kp CAPSLOCK>;
         };
 
-        hal: hal {
+        hal: hold_arcane_left {
             compatible = "zmk,behavior-hold-tap";
             label = "Hold-Arcane Left";
             bindings = <&mo>, <&key_repeat>;
@@ -64,7 +64,7 @@
             tapping-term-ms = <200>;
         };
 
-        har: har {
+        har: hold_arcane_right {
             compatible = "zmk,behavior-hold-tap";
             label = "Hold-Arcane Right";
             bindings = <&mo>, <&key_repeat>;
