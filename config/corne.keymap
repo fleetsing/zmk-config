@@ -13,6 +13,7 @@
 #define DEFAULT_L 0
 
 #include "zmk-helpers/key-labels/36.h"                                      // Source key-labels.
+
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4  // Left-hand keys.
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // Right-hand keys.
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // Thumb keys.
@@ -39,6 +40,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
+
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
@@ -52,6 +54,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
+
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
@@ -466,29 +469,29 @@
         macos_layer {
             label = "MacOS";
             bindings = <
-  &kp W             &kp G           &kp D               &kp F           &kp B       &kp Q                    &kp L                &kp U                &kp O            &kp Y
-  &hm LEFT_SHIFT R  &hm LEFT_ALT S  &hm LEFT_CONTROL T  &hm LEFT_GUI N  &kp K       &kp J                    &hm RIGHT_GUI H      &hm RIGHT_CONTROL E  &hm RIGHT_ALT A  &hm RIGHT_SHIFT I
-  &kp X             &kp C           &kp M               &kp P           &kp V       &mt RS(NUMBER_1) PERIOD  &mt RS(MINUS) COMMA  &kp SEMICOLON        &kp APOSTROPHE   &kp Z
-                                    &lt 9 ESCAPE        &lt 2 SPACE     &hal 4 0    &har 8 0                 &ss                  &kp ENTER
+  &kp W              &kp G            &kp D                &kp F            &kp B       &kp Q                    &kp L                &kp U                 &kp O             &kp Y
+  &hml LEFT_SHIFT R  &hml LEFT_ALT S  &hml LEFT_CONTROL T  &hml LEFT_GUI N  &kp K       &kp J                    &hmr RIGHT_GUI H     &hmr RIGHT_CONTROL E  &hmr RIGHT_ALT A  &hmr RIGHT_SHIFT I
+  &kp X              &kp C            &kp M                &kp P            &kp V       &mt RS(NUMBER_1) PERIOD  &mt RS(MINUS) COMMA  &kp SEMICOLON         &kp APOSTROPHE    &kp Z
+                                      &lt 9 ESCAPE         &lt 2 SPACE      &hal 4 0    &har 8 0                 &ss                  &kp ENTER
             >;
         };
 
         pc_layer {
             label = "PC";
             bindings = <
-  &trans  &trans  &trans          &trans              &trans    &trans  &trans               &trans           &trans  &trans
-  &trans  &trans  &hm LEFT_GUI T  &hm LEFT_CONTROL N  &trans    &trans  &hm RIGHT_CONTROL H  &hm RIGHT_GUI E  &trans  &trans
-  &trans  &trans  &trans          &trans              &trans    &trans  &trans               &trans           &trans  &trans
-                  &trans          &trans              &trans    &trans  &trans               &trans
+  &trans  &trans  &trans           &trans               &trans    &trans  &trans                &trans            &trans  &trans
+  &trans  &trans  &hml LEFT_GUI T  &hml LEFT_CONTROL N  &trans    &trans  &hmr RIGHT_CONTROL H  &hmr RIGHT_GUI E  &trans  &trans
+  &trans  &trans  &trans           &trans               &trans    &trans  &trans                &trans            &trans  &trans
+                  &trans           &trans               &trans    &trans  &trans                &trans
             >;
         };
 
         nav_layer {
             bindings = <
-  &none                      &kp K_CONTEXT_MENU  &kp PAGE_UP                 &kp INSERT        &none     &none   &kp F13         &kp UP_ARROW    &kp F14          &none
-  &mt LEFT_SHIFT SCROLLLOCK  &mt LEFT_ALT HOME   &mt LEFT_CONTROL PAGE_DOWN  &mt LEFT_GUI END  &none     &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none
-  &none                      &none               &none                       &none             &none     &none   &none           &none           &none            &none
-                                                 &to 0                       &trans            &trans    &trans  &trans          &trans
+  &none                       &kp K_CONTEXT_MENU  &kp PAGE_UP                  &kp INSERT         &none     &none   &kp F13         &kp UP_ARROW    &kp F14          &none
+  &hml LEFT_SHIFT SCROLLLOCK  &hml LEFT_ALT HOME  &hml LEFT_CONTROL PAGE_DOWN  &hml LEFT_GUI END  &none     &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none
+  &none                       &none               &none                        &none              &none     &none   &none           &none           &none            &none
+                                                  &to 0                        &trans             &trans    &trans  &trans          &trans
             >;
 
             label = "Nav";
@@ -496,10 +499,10 @@
 
         pc_nav_layer {
             bindings = <
-  &trans  &trans  &trans                  &trans                &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &mt LEFT_GUI PAGE_DOWN  &mt LEFT_CONTROL END  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans                  &trans                &trans    &trans  &trans  &trans  &trans  &trans
-                  &to 1                   &trans                &trans    &trans  &trans  &trans
+  &trans  &trans  &trans                   &trans                 &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &hml LEFT_GUI PAGE_DOWN  &hml LEFT_CONTROL END  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans                   &trans                 &trans    &trans  &trans  &trans  &trans  &trans
+                  &to 1                    &trans                 &trans    &trans  &trans  &trans
             >;
 
             label = "NAV";
