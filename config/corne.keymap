@@ -109,11 +109,11 @@
     };
 
     macros {
-        aacute: aacute {
+        hyper: aacute {
             compatible = "zmk,behavior-macro";
             label = "AACUTE";
             #binding-cells = <0>;
-            bindings = <&none &kp A>;
+            bindings = <&kp LC(LA(LS(LEFT_GUI)))>;
         };
 
         eacute: eacute {
@@ -469,10 +469,10 @@
         macos_layer {
             label = "MacOS";
             bindings = <
-  &kp W              &kp G            &kp D                &kp F            &kp B       &kp Q                    &kp L                &kp U                 &kp O             &kp Y
-  &hml LEFT_SHIFT R  &hml LEFT_ALT S  &hml LEFT_CONTROL T  &hml LEFT_GUI N  &kp K       &kp J                    &hmr RIGHT_GUI H     &hmr RIGHT_CONTROL E  &hmr RIGHT_ALT A  &hmr RIGHT_SHIFT I
-  &kp X              &kp C            &kp M                &kp P            &kp V       &mt RS(NUMBER_1) PERIOD  &mt RS(MINUS) COMMA  &kp SEMICOLON         &kp APOSTROPHE    &kp Z
-                                      &lt 9 ESCAPE         &lt 2 SPACE      &hal 4 0    &har 8 0                 &ss                  &kp ENTER
+  &kp W              &kp G            &kp D                &kp F            &kp B                          &kp Q                         &kp L                &kp U                 &kp O             &kp Y
+  &hml LEFT_SHIFT R  &hml LEFT_ALT S  &hml LEFT_CONTROL T  &hml LEFT_GUI N  &hml LC(LA(LS(LEFT_GUI))) K    &hmr RC(RA(RS(RIGHT_GUI))) J  &hmr RIGHT_GUI H     &hmr RIGHT_CONTROL E  &hmr RIGHT_ALT A  &hmr RIGHT_SHIFT I
+  &kp X              &kp C            &kp M                &kp P            &kp V                          &mt RS(NUMBER_1) PERIOD       &mt RS(MINUS) COMMA  &kp SEMICOLON         &kp APOSTROPHE    &kp Z
+                                      &lt 9 ESCAPE         &lt 2 SPACE      &hal 4 0                       &har 8 0                      &ss                  &kp ENTER
             >;
         };
 
